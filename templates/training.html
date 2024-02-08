@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    {% if 'инженер' in prof.lower() or 'строитель' in prof.lower()%}
+    <h1 class="text-center">Инженерные тренажеры</h1>
+    <img src="../static/img/engie.png" alt="здесь должна была быть картинка, но не нашлась"
+         class="img-fluid mx-auto d-block">
+    {% else %}
+    <h1 class="text-center">Научные симуляторы</h1>
+    <img src="../static/img/science.png" alt="здесь должна была быть картинка, но не нашлась"
+         class="img-fluid mx-auto d-block">
+    {% endif %}
+</div>
+{% endblock %}
