@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+
+{% block content %}
+{% set profs = ['инженер-исследователь', 'пилот', 'строитель', 'экзобиолог', 'врач', 'инженер по терраформированию',
+'климатолог', 'специалист по радиационной защите', 'астрогеолог', 'гляциолог', 'инженер жизнеобеспечения', 'метеоролог',
+'оператор марсохода', 'киберинженер', 'штурман', 'пилот дронов'] %}
+<div class="container-fluid ml-4 mt-4">
+    <h2>Список профессий</h2>
+    {% if list_type == 'ul' %}
+    <ul>
+        {% for prof in profs %}
+        <li>{{ prof }}</li>
+        {% endfor %}
+    </ul>
+    {% elif list_type == 'ol' %}
+    <ol>
+        {% for prof in profs %}
+        <li>{{ prof }}</li>
+        {% endfor %}
+    </ol>
+    {% else %}
+    <h2 class="text-center alert alert-danger">Ошибка!</h2>
+    <h3 class="text-center alert alert-secondary">Проверьте правильность ввода параметра!</h3>
+    {% endif %}
+</div>
+{% endblock %}
