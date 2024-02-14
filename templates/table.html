@@ -1,0 +1,38 @@
+{% extends "index.html" %}
+
+{% if sex == "male" %}
+
+{% if age < 21 %}
+{% set color = "#000099" %}
+{% set image = "../../static/img/martian_small.jpg" %}
+{% else %}
+{% set color = "#555599" %}
+{% set image = "../../static/img/martian_big.jpg" %}
+{% endif %}
+
+{% else %}
+{% if age < 21 %}
+{% set color = "#990000" %}
+{% set image = "../../static/img/martian_small.jpg" %}
+{% else %}
+{% set color = "#995555" %}
+{% set image = "../../static/img/martian_big.jpg" %}
+{% endif %}
+{% endif %}
+
+
+{% block content %}
+<div class="container align-items-start ms-0">
+    <h2 class="text-center">Оформление каюты</h2>
+    <div class="row my-2 bg-light text-center">
+        <div class="col">Цвет стен</div>
+        <div class="col">Эмблема</div>
+        <!--<div class="col-6"></div>-->
+    </div>
+    <div class="row my-2">
+        <div class="col" style="background-color: {{ color }};"></div>
+        <img src="{{ image }}" alt="Здесь должна быть картинка :(" class="col" width="100"
+             height="600">
+    </div>
+</div>
+{% endblock %}
