@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="container-fluid ml-4 mt-4">
+    <h2>Размещение по каютам</h2>
+    {% if people %}
+
+    {% for person in people %}
+    {% if loop.first %}
+    <ul>{{ person }} - Каюта № {{ loop.index }} - Капитан корабля</ul>
+    {% else %}
+    <ul>{{ person }} - Каюта № {{ loop.index }}</ul>
+    {% endif %}
+    {% endfor %}
+
+    {% else %}
+    <h2 class="text-center alert alert-danger">Ошибка!</h2>
+    <h3 class="text-center alert alert-secondary">Проверьте правильность ввода данных!</h3>
+    {% endif %}
+</div>
+{% endblock %}
