@@ -1,0 +1,24 @@
+{
+  "members": [
+    {
+      "name": "Джон",
+      "surname": "Доу",
+      "pic": "static\\img\\martian_big.jpg",
+      "specialities": [
+        "врач",
+        "инженер по терраформированию",
+        "климатолог"
+      ]
+    },
+    {
+      "name": "Риддли",
+      "surname": "Скотт",
+      "pic": "static\\img\\martian_small.jpg",
+      "specialities": [
+        "пилот",
+        "строитель",
+        "киберинженер"
+      ]
+    }
+  ]
+}
